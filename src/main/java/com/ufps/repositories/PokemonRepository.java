@@ -8,6 +8,6 @@ import com.ufps.entities.Pokemon;
 
 public interface PokemonRepository extends JpaRepository<Pokemon, Integer> {
 
-	List<Pokemon> findByTipoPokemonDescripcion(String descripcion);
+	List<Pokemon> findByTipoPokemonUuid(String uuid);
 
 }

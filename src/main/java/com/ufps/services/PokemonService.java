@@ -15,8 +15,8 @@ public class PokemonService {
 	@Autowired
 	PokemonRepository pokemonRepository;
 	
-	public List<Pokemon> getPokemonsByType(String tipo) {
-        return pokemonRepository.findByTipoPokemonDescripcion(tipo);
+	public List<Pokemon> getPokemonsByTipo(String tipoUuid) {
+        return pokemonRepository.findByTipoPokemonUuid(tipoUuid);
     }
 	
 	public Pokemon registerPokemon(Pokemon pokemon) {

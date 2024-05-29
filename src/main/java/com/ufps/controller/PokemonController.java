@@ -25,11 +25,11 @@ public class PokemonController {
 	
 	@GetMapping("/{tipo}")
     public ResponseEntity<List<Pokemon>> getPokemonsByType(@PathVariable String tipo) {
-        List<Pokemon> pokemons = pokemonService.getPokemonsByType(tipo);
+        List<Pokemon> pokemons = pokemonService.getPokemonsByTipo(tipo);
         return ResponseEntity.ok(pokemons);
     }
 
-    @PostMapping("/register")
+    @PostMapping()
     public ResponseEntity<Pokemon> registerPokemon(@RequestBody Pokemon pokemon) {
         Pokemon registeredPokemon = pokemonService.registerPokemon(pokemon);
         return ResponseEntity.status(HttpStatus.CREATED).body(registeredPokemon);
