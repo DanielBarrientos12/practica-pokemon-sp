@@ -12,7 +12,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -23,16 +22,10 @@ public class Entrenador {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@NotNull
     private String nombre;
-    
-	@NotNull
 	private String apellido;
-    
-	@NotNull
+	private String email;
 	private LocalDate fechaNacimiento;
-    
-	@NotNull
 	private LocalDate fechaVinculacion;
     
     @ManyToOne(fetch = FetchType.EAGER)
