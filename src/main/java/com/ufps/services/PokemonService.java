@@ -1,6 +1,7 @@
 package com.ufps.services;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,8 @@ public class PokemonService {
     }
 	
 	public Pokemon registerPokemon(Pokemon pokemon) {
+		String uuid = UUID.randomUUID().toString();
+		pokemon.setUuid(uuid);
         return pokemonRepository.save(pokemon);
     }
 	

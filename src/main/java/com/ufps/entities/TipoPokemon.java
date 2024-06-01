@@ -11,7 +11,7 @@ import lombok.Data;
 public class TipoPokemon {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private Integer id;
     private String descripcion;
     private String uuid;
